@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"], input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="tel"]:focus {
+            border-color: #5b9bd5;
+            outline: none;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #5b9bd5;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #4a8bc2;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: #5b9bd5;
+        }
+
+        .footer a:hover {
+            color: #4a8bc2;
+        }
+
+
+        /* Styles for the anchor link that looks like a button */
+        .btn-link {
+            margin-top: 10px;
+            width: 100%;
+            padding: 12px;
+            display: block;
+            background-color: #5b9bd5;
+            color: white;
+            font-size: 16px;
+            border-radius: 4px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-link:hover {
+            background-color: #4a8bc2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Create Account</h2>
+        <form action="/submit" method="POST">
+            <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" required placeholder="Enter your first name">
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" required placeholder="Enter your last name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm your password">
+            </div>
+            <button type="submit" class="btn">Register</button>
+	        <a href="/get-data" class="btn-link">Get Data</a>
+        </form>
+        <div class="footer">
+            <p>Already have an account? <a href="#">Login</a></p>
+        </div>
+    </div>
+
+</body>
+</html>
+
